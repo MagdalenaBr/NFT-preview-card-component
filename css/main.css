@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Outfit", sans-serif;
+	background-color: hsl(217, 54%, 11%);
+	color: hsl(215, 51%, 70%);
+	font-size: 15px;
+}
+
+.card {
+	max-height: 80vh;
+	max-width: 300px;
+	background-color: hsl(216, 50%, 16%);
+	border-radius: 20px;
+}
+
+.card-img {
+	margin: 20px;
+	max-width: 260px;
+	border-radius: 20px;
+}
+
+h2 {
+	margin: 0 0 20px 20px;
+	font-weight: bold;
+	color: hsl(0, 0%, 100%);
+}
+p {
+	margin: 20px;
+}
+.details {
+	display: flex;
+	margin: 20px 20px 20px 20px;
+}
+
+.eth {
+	flex: 1 1 auto;
+	padding-left: 8px;
+	color: hsl(178, 100%, 50%);
+	font-weight: bold;
+}
+.time {
+	padding-left: 8px;
+}
+
+.hr {
+	margin: 20px;
+	border: 1px solid hsl(215, 32%, 27%);
+}
+.avatar {
+	display: flex;
+	align-items: center;
+	padding: 0 20px 20px;
+}
+.avatar-img {
+	height: 30px;
+	border: 1px solid hsl(0, 0%, 100%);
+	border-radius: 50%;
+}
+.created-by {
+	padding-left: 10px;
+}
+
+.name {
+	color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+	padding-top: 40px;
+}
+.card-img:hover,
+h2:hover,
+.name:hover {
+	color: hsl(178, 100%, 50%);
+	cursor: pointer;
+}
+
+@media (min-width: 992px) {
+	main {
+		font-size: 18px;
+	}
+
+	.card {
+		max-width: 360px;
+	}
+
+	.card-img {
+		max-width: 320px;
+	}
+
+	.details {
+		margin: 30px 20px;
+	}
+	.avatar {
+		display: flex;
+		align-items: center;
+		padding: 0 20px 40px;
+	}
+}
