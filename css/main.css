@@ -22,17 +22,46 @@ main {
 	background-color: hsl(216, 50%, 16%);
 	border-radius: 20px;
 }
-
+.img {
+	position: relative;
+	cursor: pointer;
+}
 .card-img {
 	margin: 20px;
 	max-width: 260px;
 	border-radius: 20px;
 }
+.img::before {
+	position: absolute;
+	width: 260px;
+	height: 260px;
+	top: 20px;
+	left: 20px;
+	border-radius: 20px;
+	content: "";
+	background-color: hsl(178deg 100% 50% / 40%);
+	transition: 0.5s;
+	opacity: 0;
+}
+.img::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
 
+	transform: translate(-50%, -50%);
+	content: url(../images/icon-view.svg);
+	opacity: 0;
+	transition: 0.5s;
+}
+.img:hover.img::before,
+.img:hover.img::after {
+	opacity: 1;
+}
 h2 {
 	margin: 0 0 20px 20px;
 	font-weight: bold;
 	color: hsl(0, 0%, 100%);
+	transition: 0.5s;
 }
 p {
 	margin: 20px;
@@ -72,12 +101,12 @@ p {
 
 .name {
 	color: hsl(0, 0%, 100%);
+	transition: 0.5s;
 }
 
 .attribution {
 	padding-top: 40px;
 }
-.card-img:hover,
 h2:hover,
 .name:hover {
 	color: hsl(178, 100%, 50%);
@@ -104,5 +133,9 @@ h2:hover,
 		display: flex;
 		align-items: center;
 		padding: 0 20px 40px;
+	}
+	.img::before {
+		width: 320px;
+		height: 320px;
 	}
 }
